@@ -1,0 +1,5778 @@
+{
+  "commands": [
+    {
+      "type": "dispatch",
+      "truck": "T-04",
+      "to": "hill",
+      "qty": 25
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "dispatch",
+      "truck": "T-01",
+      "to": "harbor",
+      "qty": 25
+    },
+    {
+      "type": "dispatch",
+      "truck": "T-03",
+      "to": "school",
+      "qty": 20
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "advance"
+    }
+  ],
+  "frames": [
+    {
+      "id": "classic-fixture",
+      "title": "Classic fixture",
+      "tick": 0,
+      "version": 0,
+      "phase": "lobby",
+      "sites": [
+        {
+          "id": "north",
+          "name": "North Hub",
+          "short": "NH",
+          "x": 220,
+          "y": 100,
+          "stock": 60,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "south",
+          "name": "South Depot",
+          "short": "SD",
+          "x": 171,
+          "y": 331,
+          "stock": 50,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "east",
+          "name": "East Hub",
+          "short": "EH",
+          "x": 558,
+          "y": 246,
+          "stock": 40,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "harbor",
+          "name": "Harbor Clinic",
+          "short": "HC",
+          "x": 442,
+          "y": 91,
+          "demand": 35,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "valley",
+          "name": "Valley Shelter",
+          "short": "VS",
+          "x": 114,
+          "y": 209,
+          "demand": 30,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "city",
+          "name": "City Center",
+          "short": "CC",
+          "x": 342,
+          "y": 219,
+          "demand": 30,
+          "priority": 1,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "hill",
+          "name": "Hill Hospital",
+          "short": "HH",
+          "x": 585,
+          "y": 136,
+          "demand": 25,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "school",
+          "name": "School Relief Center",
+          "short": "SC",
+          "x": 422,
+          "y": 343,
+          "demand": 20,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        }
+      ],
+      "roads": [
+        {
+          "id": "north-valley",
+          "a": "north",
+          "b": "valley",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "north-harbor",
+          "a": "north",
+          "b": "harbor",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "north-city",
+          "a": "north",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "valley-south",
+          "a": "valley",
+          "b": "south",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "south-city",
+          "a": "south",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "south-school",
+          "a": "south",
+          "b": "school",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "city-harbor",
+          "a": "city",
+          "b": "harbor",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "east-corridor",
+          "a": "east",
+          "b": "hill",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "east-city",
+          "a": "east",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "harbor-hill",
+          "a": "harbor",
+          "b": "hill",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "school-east",
+          "a": "school",
+          "b": "east",
+          "cost": 2,
+          "blocked": false
+        }
+      ],
+      "fleet": [
+        {
+          "id": "T-01",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 0
+        },
+        {
+          "id": "T-02",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 0
+        },
+        {
+          "id": "T-03",
+          "home": "south",
+          "capacity": 30,
+          "status": "ready",
+          "readyAt": 0
+        },
+        {
+          "id": "T-04",
+          "home": "east",
+          "capacity": 40,
+          "status": "ready",
+          "readyAt": 0
+        }
+      ],
+      "shipments": [],
+      "log": []
+    },
+    {
+      "id": "classic-fixture",
+      "title": "Classic fixture",
+      "tick": 0,
+      "version": 1,
+      "phase": "running",
+      "sites": [
+        {
+          "id": "north",
+          "name": "North Hub",
+          "short": "NH",
+          "x": 220,
+          "y": 100,
+          "stock": 60,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "south",
+          "name": "South Depot",
+          "short": "SD",
+          "x": 171,
+          "y": 331,
+          "stock": 50,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "east",
+          "name": "East Hub",
+          "short": "EH",
+          "x": 558,
+          "y": 246,
+          "stock": 40,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "harbor",
+          "name": "Harbor Clinic",
+          "short": "HC",
+          "x": 442,
+          "y": 91,
+          "demand": 35,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "valley",
+          "name": "Valley Shelter",
+          "short": "VS",
+          "x": 114,
+          "y": 209,
+          "demand": 30,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "city",
+          "name": "City Center",
+          "short": "CC",
+          "x": 342,
+          "y": 219,
+          "demand": 30,
+          "priority": 1,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "hill",
+          "name": "Hill Hospital",
+          "short": "HH",
+          "x": 585,
+          "y": 136,
+          "demand": 25,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "school",
+          "name": "School Relief Center",
+          "short": "SC",
+          "x": 422,
+          "y": 343,
+          "demand": 20,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        }
+      ],
+      "roads": [
+        {
+          "id": "north-valley",
+          "a": "north",
+          "b": "valley",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "north-harbor",
+          "a": "north",
+          "b": "harbor",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "north-city",
+          "a": "north",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "valley-south",
+          "a": "valley",
+          "b": "south",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "south-city",
+          "a": "south",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "south-school",
+          "a": "south",
+          "b": "school",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "city-harbor",
+          "a": "city",
+          "b": "harbor",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "east-corridor",
+          "a": "east",
+          "b": "hill",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "east-city",
+          "a": "east",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "harbor-hill",
+          "a": "harbor",
+          "b": "hill",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "school-east",
+          "a": "school",
+          "b": "east",
+          "cost": 2,
+          "blocked": false
+        }
+      ],
+      "fleet": [
+        {
+          "id": "T-01",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 0
+        },
+        {
+          "id": "T-02",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 0
+        },
+        {
+          "id": "T-03",
+          "home": "south",
+          "capacity": 30,
+          "status": "ready",
+          "readyAt": 0
+        },
+        {
+          "id": "T-04",
+          "home": "east",
+          "capacity": 40,
+          "status": "ready",
+          "readyAt": 0
+        }
+      ],
+      "shipments": [],
+      "log": [
+        {
+          "seq": 1,
+          "tick": 0,
+          "kind": "system",
+          "text": "Relief operation started.",
+          "actor": "Crew"
+        }
+      ]
+    },
+    {
+      "id": "classic-fixture",
+      "title": "Classic fixture",
+      "tick": 0,
+      "version": 2,
+      "phase": "running",
+      "sites": [
+        {
+          "id": "north",
+          "name": "North Hub",
+          "short": "NH",
+          "x": 220,
+          "y": 100,
+          "stock": 60,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "south",
+          "name": "South Depot",
+          "short": "SD",
+          "x": 171,
+          "y": 331,
+          "stock": 50,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "east",
+          "name": "East Hub",
+          "short": "EH",
+          "x": 558,
+          "y": 246,
+          "stock": 15,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "harbor",
+          "name": "Harbor Clinic",
+          "short": "HC",
+          "x": 442,
+          "y": 91,
+          "demand": 35,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "valley",
+          "name": "Valley Shelter",
+          "short": "VS",
+          "x": 114,
+          "y": 209,
+          "demand": 30,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "city",
+          "name": "City Center",
+          "short": "CC",
+          "x": 342,
+          "y": 219,
+          "demand": 30,
+          "priority": 1,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "hill",
+          "name": "Hill Hospital",
+          "short": "HH",
+          "x": 585,
+          "y": 136,
+          "demand": 25,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "school",
+          "name": "School Relief Center",
+          "short": "SC",
+          "x": 422,
+          "y": 343,
+          "demand": 20,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        }
+      ],
+      "roads": [
+        {
+          "id": "north-valley",
+          "a": "north",
+          "b": "valley",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "north-harbor",
+          "a": "north",
+          "b": "harbor",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "north-city",
+          "a": "north",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "valley-south",
+          "a": "valley",
+          "b": "south",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "south-city",
+          "a": "south",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "south-school",
+          "a": "south",
+          "b": "school",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "city-harbor",
+          "a": "city",
+          "b": "harbor",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "east-corridor",
+          "a": "east",
+          "b": "hill",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "east-city",
+          "a": "east",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "harbor-hill",
+          "a": "harbor",
+          "b": "hill",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "school-east",
+          "a": "school",
+          "b": "east",
+          "cost": 2,
+          "blocked": false
+        }
+      ],
+      "fleet": [
+        {
+          "id": "T-01",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 0
+        },
+        {
+          "id": "T-02",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 0
+        },
+        {
+          "id": "T-03",
+          "home": "south",
+          "capacity": 30,
+          "status": "ready",
+          "readyAt": 0
+        },
+        {
+          "id": "T-04",
+          "home": "east",
+          "capacity": 40,
+          "status": "outbound",
+          "readyAt": 2
+        }
+      ],
+      "shipments": [
+        {
+          "id": "S-01",
+          "truck": "T-04",
+          "from": "east",
+          "to": "hill",
+          "qty": 25,
+          "edges": ["east-corridor"],
+          "departure": 0,
+          "arrival": 1,
+          "delivered": false
+        }
+      ],
+      "log": [
+        {
+          "seq": 1,
+          "tick": 0,
+          "kind": "system",
+          "text": "Relief operation started.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 2,
+          "tick": 0,
+          "kind": "dispatch",
+          "text": "T-04 dispatched 25 units to Hill Hospital.",
+          "actor": "Crew"
+        }
+      ]
+    },
+    {
+      "id": "classic-fixture",
+      "title": "Classic fixture",
+      "tick": 1,
+      "version": 3,
+      "phase": "running",
+      "sites": [
+        {
+          "id": "north",
+          "name": "North Hub",
+          "short": "NH",
+          "x": 220,
+          "y": 100,
+          "stock": 60,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "south",
+          "name": "South Depot",
+          "short": "SD",
+          "x": 171,
+          "y": 331,
+          "stock": 50,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "east",
+          "name": "East Hub",
+          "short": "EH",
+          "x": 558,
+          "y": 246,
+          "stock": 15,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "harbor",
+          "name": "Harbor Clinic",
+          "short": "HC",
+          "x": 442,
+          "y": 91,
+          "demand": 35,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "valley",
+          "name": "Valley Shelter",
+          "short": "VS",
+          "x": 114,
+          "y": 209,
+          "demand": 30,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "city",
+          "name": "City Center",
+          "short": "CC",
+          "x": 342,
+          "y": 219,
+          "demand": 30,
+          "priority": 1,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "hill",
+          "name": "Hill Hospital",
+          "short": "HH",
+          "x": 585,
+          "y": 136,
+          "demand": 25,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 25
+        },
+        {
+          "id": "school",
+          "name": "School Relief Center",
+          "short": "SC",
+          "x": 422,
+          "y": 343,
+          "demand": 20,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        }
+      ],
+      "roads": [
+        {
+          "id": "north-valley",
+          "a": "north",
+          "b": "valley",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "north-harbor",
+          "a": "north",
+          "b": "harbor",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "north-city",
+          "a": "north",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "valley-south",
+          "a": "valley",
+          "b": "south",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "south-city",
+          "a": "south",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "south-school",
+          "a": "south",
+          "b": "school",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "city-harbor",
+          "a": "city",
+          "b": "harbor",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "east-corridor",
+          "a": "east",
+          "b": "hill",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "east-city",
+          "a": "east",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "harbor-hill",
+          "a": "harbor",
+          "b": "hill",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "school-east",
+          "a": "school",
+          "b": "east",
+          "cost": 2,
+          "blocked": false
+        }
+      ],
+      "fleet": [
+        {
+          "id": "T-01",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 0
+        },
+        {
+          "id": "T-02",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 0
+        },
+        {
+          "id": "T-03",
+          "home": "south",
+          "capacity": 30,
+          "status": "ready",
+          "readyAt": 0
+        },
+        {
+          "id": "T-04",
+          "home": "east",
+          "capacity": 40,
+          "status": "returning",
+          "readyAt": 2
+        }
+      ],
+      "shipments": [
+        {
+          "id": "S-01",
+          "truck": "T-04",
+          "from": "east",
+          "to": "hill",
+          "qty": 25,
+          "edges": ["east-corridor"],
+          "departure": 0,
+          "arrival": 1,
+          "delivered": true
+        }
+      ],
+      "log": [
+        {
+          "seq": 1,
+          "tick": 0,
+          "kind": "system",
+          "text": "Relief operation started.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 2,
+          "tick": 0,
+          "kind": "dispatch",
+          "text": "T-04 dispatched 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 3,
+          "tick": 1,
+          "kind": "system",
+          "text": "Advanced to turn 1.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 4,
+          "tick": 1,
+          "kind": "arrival",
+          "text": "T-04 delivered 25 units to Hill Hospital.",
+          "actor": "Crew"
+        }
+      ]
+    },
+    {
+      "id": "classic-fixture",
+      "title": "Classic fixture",
+      "tick": 1,
+      "version": 4,
+      "phase": "running",
+      "sites": [
+        {
+          "id": "north",
+          "name": "North Hub",
+          "short": "NH",
+          "x": 220,
+          "y": 100,
+          "stock": 35,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "south",
+          "name": "South Depot",
+          "short": "SD",
+          "x": 171,
+          "y": 331,
+          "stock": 50,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "east",
+          "name": "East Hub",
+          "short": "EH",
+          "x": 558,
+          "y": 246,
+          "stock": 15,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "harbor",
+          "name": "Harbor Clinic",
+          "short": "HC",
+          "x": 442,
+          "y": 91,
+          "demand": 35,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "valley",
+          "name": "Valley Shelter",
+          "short": "VS",
+          "x": 114,
+          "y": 209,
+          "demand": 30,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "city",
+          "name": "City Center",
+          "short": "CC",
+          "x": 342,
+          "y": 219,
+          "demand": 30,
+          "priority": 1,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "hill",
+          "name": "Hill Hospital",
+          "short": "HH",
+          "x": 585,
+          "y": 136,
+          "demand": 25,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 25
+        },
+        {
+          "id": "school",
+          "name": "School Relief Center",
+          "short": "SC",
+          "x": 422,
+          "y": 343,
+          "demand": 20,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        }
+      ],
+      "roads": [
+        {
+          "id": "north-valley",
+          "a": "north",
+          "b": "valley",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "north-harbor",
+          "a": "north",
+          "b": "harbor",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "north-city",
+          "a": "north",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "valley-south",
+          "a": "valley",
+          "b": "south",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "south-city",
+          "a": "south",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "south-school",
+          "a": "south",
+          "b": "school",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "city-harbor",
+          "a": "city",
+          "b": "harbor",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "east-corridor",
+          "a": "east",
+          "b": "hill",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "east-city",
+          "a": "east",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "harbor-hill",
+          "a": "harbor",
+          "b": "hill",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "school-east",
+          "a": "school",
+          "b": "east",
+          "cost": 2,
+          "blocked": false
+        }
+      ],
+      "fleet": [
+        {
+          "id": "T-01",
+          "home": "north",
+          "capacity": 25,
+          "status": "outbound",
+          "readyAt": 5
+        },
+        {
+          "id": "T-02",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 0
+        },
+        {
+          "id": "T-03",
+          "home": "south",
+          "capacity": 30,
+          "status": "ready",
+          "readyAt": 0
+        },
+        {
+          "id": "T-04",
+          "home": "east",
+          "capacity": 40,
+          "status": "returning",
+          "readyAt": 2
+        }
+      ],
+      "shipments": [
+        {
+          "id": "S-01",
+          "truck": "T-04",
+          "from": "east",
+          "to": "hill",
+          "qty": 25,
+          "edges": ["east-corridor"],
+          "departure": 0,
+          "arrival": 1,
+          "delivered": true
+        },
+        {
+          "id": "S-02",
+          "truck": "T-01",
+          "from": "north",
+          "to": "harbor",
+          "qty": 25,
+          "edges": ["north-harbor"],
+          "departure": 1,
+          "arrival": 3,
+          "delivered": false
+        }
+      ],
+      "log": [
+        {
+          "seq": 1,
+          "tick": 0,
+          "kind": "system",
+          "text": "Relief operation started.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 2,
+          "tick": 0,
+          "kind": "dispatch",
+          "text": "T-04 dispatched 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 3,
+          "tick": 1,
+          "kind": "system",
+          "text": "Advanced to turn 1.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 4,
+          "tick": 1,
+          "kind": "arrival",
+          "text": "T-04 delivered 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 5,
+          "tick": 1,
+          "kind": "dispatch",
+          "text": "T-01 dispatched 25 units to Harbor Clinic.",
+          "actor": "Crew"
+        }
+      ]
+    },
+    {
+      "id": "classic-fixture",
+      "title": "Classic fixture",
+      "tick": 1,
+      "version": 5,
+      "phase": "running",
+      "sites": [
+        {
+          "id": "north",
+          "name": "North Hub",
+          "short": "NH",
+          "x": 220,
+          "y": 100,
+          "stock": 35,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "south",
+          "name": "South Depot",
+          "short": "SD",
+          "x": 171,
+          "y": 331,
+          "stock": 30,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "east",
+          "name": "East Hub",
+          "short": "EH",
+          "x": 558,
+          "y": 246,
+          "stock": 15,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "harbor",
+          "name": "Harbor Clinic",
+          "short": "HC",
+          "x": 442,
+          "y": 91,
+          "demand": 35,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "valley",
+          "name": "Valley Shelter",
+          "short": "VS",
+          "x": 114,
+          "y": 209,
+          "demand": 30,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "city",
+          "name": "City Center",
+          "short": "CC",
+          "x": 342,
+          "y": 219,
+          "demand": 30,
+          "priority": 1,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "hill",
+          "name": "Hill Hospital",
+          "short": "HH",
+          "x": 585,
+          "y": 136,
+          "demand": 25,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 25
+        },
+        {
+          "id": "school",
+          "name": "School Relief Center",
+          "short": "SC",
+          "x": 422,
+          "y": 343,
+          "demand": 20,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        }
+      ],
+      "roads": [
+        {
+          "id": "north-valley",
+          "a": "north",
+          "b": "valley",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "north-harbor",
+          "a": "north",
+          "b": "harbor",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "north-city",
+          "a": "north",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "valley-south",
+          "a": "valley",
+          "b": "south",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "south-city",
+          "a": "south",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "south-school",
+          "a": "south",
+          "b": "school",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "city-harbor",
+          "a": "city",
+          "b": "harbor",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "east-corridor",
+          "a": "east",
+          "b": "hill",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "east-city",
+          "a": "east",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "harbor-hill",
+          "a": "harbor",
+          "b": "hill",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "school-east",
+          "a": "school",
+          "b": "east",
+          "cost": 2,
+          "blocked": false
+        }
+      ],
+      "fleet": [
+        {
+          "id": "T-01",
+          "home": "north",
+          "capacity": 25,
+          "status": "outbound",
+          "readyAt": 5
+        },
+        {
+          "id": "T-02",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 0
+        },
+        {
+          "id": "T-03",
+          "home": "south",
+          "capacity": 30,
+          "status": "outbound",
+          "readyAt": 5
+        },
+        {
+          "id": "T-04",
+          "home": "east",
+          "capacity": 40,
+          "status": "returning",
+          "readyAt": 2
+        }
+      ],
+      "shipments": [
+        {
+          "id": "S-01",
+          "truck": "T-04",
+          "from": "east",
+          "to": "hill",
+          "qty": 25,
+          "edges": ["east-corridor"],
+          "departure": 0,
+          "arrival": 1,
+          "delivered": true
+        },
+        {
+          "id": "S-02",
+          "truck": "T-01",
+          "from": "north",
+          "to": "harbor",
+          "qty": 25,
+          "edges": ["north-harbor"],
+          "departure": 1,
+          "arrival": 3,
+          "delivered": false
+        },
+        {
+          "id": "S-03",
+          "truck": "T-03",
+          "from": "south",
+          "to": "school",
+          "qty": 20,
+          "edges": ["south-school"],
+          "departure": 1,
+          "arrival": 3,
+          "delivered": false
+        }
+      ],
+      "log": [
+        {
+          "seq": 1,
+          "tick": 0,
+          "kind": "system",
+          "text": "Relief operation started.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 2,
+          "tick": 0,
+          "kind": "dispatch",
+          "text": "T-04 dispatched 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 3,
+          "tick": 1,
+          "kind": "system",
+          "text": "Advanced to turn 1.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 4,
+          "tick": 1,
+          "kind": "arrival",
+          "text": "T-04 delivered 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 5,
+          "tick": 1,
+          "kind": "dispatch",
+          "text": "T-01 dispatched 25 units to Harbor Clinic.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 6,
+          "tick": 1,
+          "kind": "dispatch",
+          "text": "T-03 dispatched 20 units to School Relief Center.",
+          "actor": "Crew"
+        }
+      ]
+    },
+    {
+      "id": "classic-fixture",
+      "title": "Classic fixture",
+      "tick": 2,
+      "version": 6,
+      "phase": "running",
+      "sites": [
+        {
+          "id": "north",
+          "name": "North Hub",
+          "short": "NH",
+          "x": 220,
+          "y": 100,
+          "stock": 35,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "south",
+          "name": "South Depot",
+          "short": "SD",
+          "x": 171,
+          "y": 331,
+          "stock": 30,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "east",
+          "name": "East Hub",
+          "short": "EH",
+          "x": 558,
+          "y": 246,
+          "stock": 15,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "harbor",
+          "name": "Harbor Clinic",
+          "short": "HC",
+          "x": 442,
+          "y": 91,
+          "demand": 35,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "valley",
+          "name": "Valley Shelter",
+          "short": "VS",
+          "x": 114,
+          "y": 209,
+          "demand": 30,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "city",
+          "name": "City Center",
+          "short": "CC",
+          "x": 342,
+          "y": 219,
+          "demand": 30,
+          "priority": 1,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "hill",
+          "name": "Hill Hospital",
+          "short": "HH",
+          "x": 585,
+          "y": 136,
+          "demand": 25,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 25
+        },
+        {
+          "id": "school",
+          "name": "School Relief Center",
+          "short": "SC",
+          "x": 422,
+          "y": 343,
+          "demand": 20,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        }
+      ],
+      "roads": [
+        {
+          "id": "north-valley",
+          "a": "north",
+          "b": "valley",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "north-harbor",
+          "a": "north",
+          "b": "harbor",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "north-city",
+          "a": "north",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "valley-south",
+          "a": "valley",
+          "b": "south",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "south-city",
+          "a": "south",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "south-school",
+          "a": "south",
+          "b": "school",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "city-harbor",
+          "a": "city",
+          "b": "harbor",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "east-corridor",
+          "a": "east",
+          "b": "hill",
+          "cost": 1,
+          "blocked": true
+        },
+        {
+          "id": "east-city",
+          "a": "east",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "harbor-hill",
+          "a": "harbor",
+          "b": "hill",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "school-east",
+          "a": "school",
+          "b": "east",
+          "cost": 2,
+          "blocked": false
+        }
+      ],
+      "fleet": [
+        {
+          "id": "T-01",
+          "home": "north",
+          "capacity": 25,
+          "status": "outbound",
+          "readyAt": 5
+        },
+        {
+          "id": "T-02",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 0
+        },
+        {
+          "id": "T-03",
+          "home": "south",
+          "capacity": 30,
+          "status": "outbound",
+          "readyAt": 5
+        },
+        {
+          "id": "T-04",
+          "home": "east",
+          "capacity": 40,
+          "status": "ready",
+          "readyAt": 2
+        }
+      ],
+      "shipments": [
+        {
+          "id": "S-01",
+          "truck": "T-04",
+          "from": "east",
+          "to": "hill",
+          "qty": 25,
+          "edges": ["east-corridor"],
+          "departure": 0,
+          "arrival": 1,
+          "delivered": true
+        },
+        {
+          "id": "S-02",
+          "truck": "T-01",
+          "from": "north",
+          "to": "harbor",
+          "qty": 25,
+          "edges": ["north-harbor"],
+          "departure": 1,
+          "arrival": 3,
+          "delivered": false
+        },
+        {
+          "id": "S-03",
+          "truck": "T-03",
+          "from": "south",
+          "to": "school",
+          "qty": 20,
+          "edges": ["south-school"],
+          "departure": 1,
+          "arrival": 3,
+          "delivered": false
+        }
+      ],
+      "log": [
+        {
+          "seq": 1,
+          "tick": 0,
+          "kind": "system",
+          "text": "Relief operation started.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 2,
+          "tick": 0,
+          "kind": "dispatch",
+          "text": "T-04 dispatched 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 3,
+          "tick": 1,
+          "kind": "system",
+          "text": "Advanced to turn 1.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 4,
+          "tick": 1,
+          "kind": "arrival",
+          "text": "T-04 delivered 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 5,
+          "tick": 1,
+          "kind": "dispatch",
+          "text": "T-01 dispatched 25 units to Harbor Clinic.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 6,
+          "tick": 1,
+          "kind": "dispatch",
+          "text": "T-03 dispatched 20 units to School Relief Center.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 7,
+          "tick": 2,
+          "kind": "system",
+          "text": "Advanced to turn 2.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 8,
+          "tick": 2,
+          "kind": "alert",
+          "text": "East corridor closed. New dispatches must reroute.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 9,
+          "tick": 2,
+          "kind": "arrival",
+          "text": "T-04 returned to base.",
+          "actor": "Crew"
+        }
+      ]
+    },
+    {
+      "id": "classic-fixture",
+      "title": "Classic fixture",
+      "tick": 3,
+      "version": 7,
+      "phase": "running",
+      "sites": [
+        {
+          "id": "north",
+          "name": "North Hub",
+          "short": "NH",
+          "x": 220,
+          "y": 100,
+          "stock": 35,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "south",
+          "name": "South Depot",
+          "short": "SD",
+          "x": 171,
+          "y": 331,
+          "stock": 30,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "east",
+          "name": "East Hub",
+          "short": "EH",
+          "x": 558,
+          "y": 246,
+          "stock": 15,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "harbor",
+          "name": "Harbor Clinic",
+          "short": "HC",
+          "x": 442,
+          "y": 91,
+          "demand": 35,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 25
+        },
+        {
+          "id": "valley",
+          "name": "Valley Shelter",
+          "short": "VS",
+          "x": 114,
+          "y": 209,
+          "demand": 30,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "city",
+          "name": "City Center",
+          "short": "CC",
+          "x": 342,
+          "y": 219,
+          "demand": 30,
+          "priority": 1,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "hill",
+          "name": "Hill Hospital",
+          "short": "HH",
+          "x": 585,
+          "y": 136,
+          "demand": 25,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 25
+        },
+        {
+          "id": "school",
+          "name": "School Relief Center",
+          "short": "SC",
+          "x": 422,
+          "y": 343,
+          "demand": 20,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 20
+        }
+      ],
+      "roads": [
+        {
+          "id": "north-valley",
+          "a": "north",
+          "b": "valley",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "north-harbor",
+          "a": "north",
+          "b": "harbor",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "north-city",
+          "a": "north",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "valley-south",
+          "a": "valley",
+          "b": "south",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "south-city",
+          "a": "south",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "south-school",
+          "a": "south",
+          "b": "school",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "city-harbor",
+          "a": "city",
+          "b": "harbor",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "east-corridor",
+          "a": "east",
+          "b": "hill",
+          "cost": 1,
+          "blocked": true
+        },
+        {
+          "id": "east-city",
+          "a": "east",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "harbor-hill",
+          "a": "harbor",
+          "b": "hill",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "school-east",
+          "a": "school",
+          "b": "east",
+          "cost": 2,
+          "blocked": false
+        }
+      ],
+      "fleet": [
+        {
+          "id": "T-01",
+          "home": "north",
+          "capacity": 25,
+          "status": "returning",
+          "readyAt": 5
+        },
+        {
+          "id": "T-02",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 0
+        },
+        {
+          "id": "T-03",
+          "home": "south",
+          "capacity": 30,
+          "status": "returning",
+          "readyAt": 5
+        },
+        {
+          "id": "T-04",
+          "home": "east",
+          "capacity": 40,
+          "status": "ready",
+          "readyAt": 2
+        }
+      ],
+      "shipments": [
+        {
+          "id": "S-01",
+          "truck": "T-04",
+          "from": "east",
+          "to": "hill",
+          "qty": 25,
+          "edges": ["east-corridor"],
+          "departure": 0,
+          "arrival": 1,
+          "delivered": true
+        },
+        {
+          "id": "S-02",
+          "truck": "T-01",
+          "from": "north",
+          "to": "harbor",
+          "qty": 25,
+          "edges": ["north-harbor"],
+          "departure": 1,
+          "arrival": 3,
+          "delivered": true
+        },
+        {
+          "id": "S-03",
+          "truck": "T-03",
+          "from": "south",
+          "to": "school",
+          "qty": 20,
+          "edges": ["south-school"],
+          "departure": 1,
+          "arrival": 3,
+          "delivered": true
+        }
+      ],
+      "log": [
+        {
+          "seq": 1,
+          "tick": 0,
+          "kind": "system",
+          "text": "Relief operation started.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 2,
+          "tick": 0,
+          "kind": "dispatch",
+          "text": "T-04 dispatched 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 3,
+          "tick": 1,
+          "kind": "system",
+          "text": "Advanced to turn 1.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 4,
+          "tick": 1,
+          "kind": "arrival",
+          "text": "T-04 delivered 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 5,
+          "tick": 1,
+          "kind": "dispatch",
+          "text": "T-01 dispatched 25 units to Harbor Clinic.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 6,
+          "tick": 1,
+          "kind": "dispatch",
+          "text": "T-03 dispatched 20 units to School Relief Center.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 7,
+          "tick": 2,
+          "kind": "system",
+          "text": "Advanced to turn 2.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 8,
+          "tick": 2,
+          "kind": "alert",
+          "text": "East corridor closed. New dispatches must reroute.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 9,
+          "tick": 2,
+          "kind": "arrival",
+          "text": "T-04 returned to base.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 10,
+          "tick": 3,
+          "kind": "system",
+          "text": "Advanced to turn 3.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 11,
+          "tick": 3,
+          "kind": "arrival",
+          "text": "T-01 delivered 25 units to Harbor Clinic.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 12,
+          "tick": 3,
+          "kind": "arrival",
+          "text": "T-03 delivered 20 units to School Relief Center.",
+          "actor": "Crew"
+        }
+      ]
+    },
+    {
+      "id": "classic-fixture",
+      "title": "Classic fixture",
+      "tick": 4,
+      "version": 8,
+      "phase": "running",
+      "sites": [
+        {
+          "id": "north",
+          "name": "North Hub",
+          "short": "NH",
+          "x": 220,
+          "y": 100,
+          "stock": 35,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "south",
+          "name": "South Depot",
+          "short": "SD",
+          "x": 171,
+          "y": 331,
+          "stock": 30,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "east",
+          "name": "East Hub",
+          "short": "EH",
+          "x": 558,
+          "y": 246,
+          "stock": 5,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "harbor",
+          "name": "Harbor Clinic",
+          "short": "HC",
+          "x": 442,
+          "y": 91,
+          "demand": 35,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 25
+        },
+        {
+          "id": "valley",
+          "name": "Valley Shelter",
+          "short": "VS",
+          "x": 114,
+          "y": 209,
+          "demand": 30,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "city",
+          "name": "City Center",
+          "short": "CC",
+          "x": 342,
+          "y": 219,
+          "demand": 30,
+          "priority": 1,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "hill",
+          "name": "Hill Hospital",
+          "short": "HH",
+          "x": 585,
+          "y": 136,
+          "demand": 25,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 25
+        },
+        {
+          "id": "school",
+          "name": "School Relief Center",
+          "short": "SC",
+          "x": 422,
+          "y": 343,
+          "demand": 20,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 20
+        }
+      ],
+      "roads": [
+        {
+          "id": "north-valley",
+          "a": "north",
+          "b": "valley",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "north-harbor",
+          "a": "north",
+          "b": "harbor",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "north-city",
+          "a": "north",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "valley-south",
+          "a": "valley",
+          "b": "south",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "south-city",
+          "a": "south",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "south-school",
+          "a": "south",
+          "b": "school",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "city-harbor",
+          "a": "city",
+          "b": "harbor",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "east-corridor",
+          "a": "east",
+          "b": "hill",
+          "cost": 1,
+          "blocked": true
+        },
+        {
+          "id": "east-city",
+          "a": "east",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "harbor-hill",
+          "a": "harbor",
+          "b": "hill",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "school-east",
+          "a": "school",
+          "b": "east",
+          "cost": 2,
+          "blocked": false
+        }
+      ],
+      "fleet": [
+        {
+          "id": "T-01",
+          "home": "north",
+          "capacity": 25,
+          "status": "returning",
+          "readyAt": 5
+        },
+        {
+          "id": "T-02",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 0
+        },
+        {
+          "id": "T-03",
+          "home": "south",
+          "capacity": 30,
+          "status": "returning",
+          "readyAt": 5
+        },
+        {
+          "id": "T-04",
+          "home": "east",
+          "capacity": 40,
+          "status": "ready",
+          "readyAt": 2
+        }
+      ],
+      "shipments": [
+        {
+          "id": "S-01",
+          "truck": "T-04",
+          "from": "east",
+          "to": "hill",
+          "qty": 25,
+          "edges": ["east-corridor"],
+          "departure": 0,
+          "arrival": 1,
+          "delivered": true
+        },
+        {
+          "id": "S-02",
+          "truck": "T-01",
+          "from": "north",
+          "to": "harbor",
+          "qty": 25,
+          "edges": ["north-harbor"],
+          "departure": 1,
+          "arrival": 3,
+          "delivered": true
+        },
+        {
+          "id": "S-03",
+          "truck": "T-03",
+          "from": "south",
+          "to": "school",
+          "qty": 20,
+          "edges": ["south-school"],
+          "departure": 1,
+          "arrival": 3,
+          "delivered": true
+        }
+      ],
+      "log": [
+        {
+          "seq": 1,
+          "tick": 0,
+          "kind": "system",
+          "text": "Relief operation started.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 2,
+          "tick": 0,
+          "kind": "dispatch",
+          "text": "T-04 dispatched 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 3,
+          "tick": 1,
+          "kind": "system",
+          "text": "Advanced to turn 1.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 4,
+          "tick": 1,
+          "kind": "arrival",
+          "text": "T-04 delivered 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 5,
+          "tick": 1,
+          "kind": "dispatch",
+          "text": "T-01 dispatched 25 units to Harbor Clinic.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 6,
+          "tick": 1,
+          "kind": "dispatch",
+          "text": "T-03 dispatched 20 units to School Relief Center.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 7,
+          "tick": 2,
+          "kind": "system",
+          "text": "Advanced to turn 2.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 8,
+          "tick": 2,
+          "kind": "alert",
+          "text": "East corridor closed. New dispatches must reroute.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 9,
+          "tick": 2,
+          "kind": "arrival",
+          "text": "T-04 returned to base.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 10,
+          "tick": 3,
+          "kind": "system",
+          "text": "Advanced to turn 3.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 11,
+          "tick": 3,
+          "kind": "arrival",
+          "text": "T-01 delivered 25 units to Harbor Clinic.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 12,
+          "tick": 3,
+          "kind": "arrival",
+          "text": "T-03 delivered 20 units to School Relief Center.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 13,
+          "tick": 4,
+          "kind": "system",
+          "text": "Advanced to turn 4.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 14,
+          "tick": 4,
+          "kind": "alert",
+          "text": "Flooding at East Hub. 10 units of stock lost.",
+          "actor": "Crew"
+        }
+      ]
+    },
+    {
+      "id": "classic-fixture",
+      "title": "Classic fixture",
+      "tick": 5,
+      "version": 9,
+      "phase": "running",
+      "sites": [
+        {
+          "id": "north",
+          "name": "North Hub",
+          "short": "NH",
+          "x": 220,
+          "y": 100,
+          "stock": 35,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "south",
+          "name": "South Depot",
+          "short": "SD",
+          "x": 171,
+          "y": 331,
+          "stock": 30,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "east",
+          "name": "East Hub",
+          "short": "EH",
+          "x": 558,
+          "y": 246,
+          "stock": 5,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "harbor",
+          "name": "Harbor Clinic",
+          "short": "HC",
+          "x": 442,
+          "y": 91,
+          "demand": 35,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 25
+        },
+        {
+          "id": "valley",
+          "name": "Valley Shelter",
+          "short": "VS",
+          "x": 114,
+          "y": 209,
+          "demand": 30,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "city",
+          "name": "City Center",
+          "short": "CC",
+          "x": 342,
+          "y": 219,
+          "demand": 30,
+          "priority": 1,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "hill",
+          "name": "Hill Hospital",
+          "short": "HH",
+          "x": 585,
+          "y": 136,
+          "demand": 25,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 25
+        },
+        {
+          "id": "school",
+          "name": "School Relief Center",
+          "short": "SC",
+          "x": 422,
+          "y": 343,
+          "demand": 20,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 20
+        }
+      ],
+      "roads": [
+        {
+          "id": "north-valley",
+          "a": "north",
+          "b": "valley",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "north-harbor",
+          "a": "north",
+          "b": "harbor",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "north-city",
+          "a": "north",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "valley-south",
+          "a": "valley",
+          "b": "south",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "south-city",
+          "a": "south",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "south-school",
+          "a": "south",
+          "b": "school",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "city-harbor",
+          "a": "city",
+          "b": "harbor",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "east-corridor",
+          "a": "east",
+          "b": "hill",
+          "cost": 1,
+          "blocked": true
+        },
+        {
+          "id": "east-city",
+          "a": "east",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "harbor-hill",
+          "a": "harbor",
+          "b": "hill",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "school-east",
+          "a": "school",
+          "b": "east",
+          "cost": 2,
+          "blocked": false
+        }
+      ],
+      "fleet": [
+        {
+          "id": "T-01",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 5
+        },
+        {
+          "id": "T-02",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 0
+        },
+        {
+          "id": "T-03",
+          "home": "south",
+          "capacity": 30,
+          "status": "ready",
+          "readyAt": 5
+        },
+        {
+          "id": "T-04",
+          "home": "east",
+          "capacity": 40,
+          "status": "ready",
+          "readyAt": 2
+        }
+      ],
+      "shipments": [
+        {
+          "id": "S-01",
+          "truck": "T-04",
+          "from": "east",
+          "to": "hill",
+          "qty": 25,
+          "edges": ["east-corridor"],
+          "departure": 0,
+          "arrival": 1,
+          "delivered": true
+        },
+        {
+          "id": "S-02",
+          "truck": "T-01",
+          "from": "north",
+          "to": "harbor",
+          "qty": 25,
+          "edges": ["north-harbor"],
+          "departure": 1,
+          "arrival": 3,
+          "delivered": true
+        },
+        {
+          "id": "S-03",
+          "truck": "T-03",
+          "from": "south",
+          "to": "school",
+          "qty": 20,
+          "edges": ["south-school"],
+          "departure": 1,
+          "arrival": 3,
+          "delivered": true
+        }
+      ],
+      "log": [
+        {
+          "seq": 1,
+          "tick": 0,
+          "kind": "system",
+          "text": "Relief operation started.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 2,
+          "tick": 0,
+          "kind": "dispatch",
+          "text": "T-04 dispatched 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 3,
+          "tick": 1,
+          "kind": "system",
+          "text": "Advanced to turn 1.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 4,
+          "tick": 1,
+          "kind": "arrival",
+          "text": "T-04 delivered 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 5,
+          "tick": 1,
+          "kind": "dispatch",
+          "text": "T-01 dispatched 25 units to Harbor Clinic.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 6,
+          "tick": 1,
+          "kind": "dispatch",
+          "text": "T-03 dispatched 20 units to School Relief Center.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 7,
+          "tick": 2,
+          "kind": "system",
+          "text": "Advanced to turn 2.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 8,
+          "tick": 2,
+          "kind": "alert",
+          "text": "East corridor closed. New dispatches must reroute.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 9,
+          "tick": 2,
+          "kind": "arrival",
+          "text": "T-04 returned to base.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 10,
+          "tick": 3,
+          "kind": "system",
+          "text": "Advanced to turn 3.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 11,
+          "tick": 3,
+          "kind": "arrival",
+          "text": "T-01 delivered 25 units to Harbor Clinic.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 12,
+          "tick": 3,
+          "kind": "arrival",
+          "text": "T-03 delivered 20 units to School Relief Center.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 13,
+          "tick": 4,
+          "kind": "system",
+          "text": "Advanced to turn 4.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 14,
+          "tick": 4,
+          "kind": "alert",
+          "text": "Flooding at East Hub. 10 units of stock lost.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 15,
+          "tick": 5,
+          "kind": "system",
+          "text": "Advanced to turn 5.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 16,
+          "tick": 5,
+          "kind": "arrival",
+          "text": "T-01 returned to base.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 17,
+          "tick": 5,
+          "kind": "arrival",
+          "text": "T-03 returned to base.",
+          "actor": "Crew"
+        }
+      ]
+    },
+    {
+      "id": "classic-fixture",
+      "title": "Classic fixture",
+      "tick": 6,
+      "version": 10,
+      "phase": "running",
+      "sites": [
+        {
+          "id": "north",
+          "name": "North Hub",
+          "short": "NH",
+          "x": 220,
+          "y": 100,
+          "stock": 35,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "south",
+          "name": "South Depot",
+          "short": "SD",
+          "x": 171,
+          "y": 331,
+          "stock": 30,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "east",
+          "name": "East Hub",
+          "short": "EH",
+          "x": 558,
+          "y": 246,
+          "stock": 5,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "harbor",
+          "name": "Harbor Clinic",
+          "short": "HC",
+          "x": 442,
+          "y": 91,
+          "demand": 35,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 25
+        },
+        {
+          "id": "valley",
+          "name": "Valley Shelter",
+          "short": "VS",
+          "x": 114,
+          "y": 209,
+          "demand": 30,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "city",
+          "name": "City Center",
+          "short": "CC",
+          "x": 342,
+          "y": 219,
+          "demand": 40,
+          "priority": 1,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "hill",
+          "name": "Hill Hospital",
+          "short": "HH",
+          "x": 585,
+          "y": 136,
+          "demand": 25,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 25
+        },
+        {
+          "id": "school",
+          "name": "School Relief Center",
+          "short": "SC",
+          "x": 422,
+          "y": 343,
+          "demand": 20,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 20
+        }
+      ],
+      "roads": [
+        {
+          "id": "north-valley",
+          "a": "north",
+          "b": "valley",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "north-harbor",
+          "a": "north",
+          "b": "harbor",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "north-city",
+          "a": "north",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "valley-south",
+          "a": "valley",
+          "b": "south",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "south-city",
+          "a": "south",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "south-school",
+          "a": "south",
+          "b": "school",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "city-harbor",
+          "a": "city",
+          "b": "harbor",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "east-corridor",
+          "a": "east",
+          "b": "hill",
+          "cost": 1,
+          "blocked": true
+        },
+        {
+          "id": "east-city",
+          "a": "east",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "harbor-hill",
+          "a": "harbor",
+          "b": "hill",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "school-east",
+          "a": "school",
+          "b": "east",
+          "cost": 2,
+          "blocked": false
+        }
+      ],
+      "fleet": [
+        {
+          "id": "T-01",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 5
+        },
+        {
+          "id": "T-02",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 0
+        },
+        {
+          "id": "T-03",
+          "home": "south",
+          "capacity": 30,
+          "status": "ready",
+          "readyAt": 5
+        },
+        {
+          "id": "T-04",
+          "home": "east",
+          "capacity": 40,
+          "status": "ready",
+          "readyAt": 2
+        }
+      ],
+      "shipments": [
+        {
+          "id": "S-01",
+          "truck": "T-04",
+          "from": "east",
+          "to": "hill",
+          "qty": 25,
+          "edges": ["east-corridor"],
+          "departure": 0,
+          "arrival": 1,
+          "delivered": true
+        },
+        {
+          "id": "S-02",
+          "truck": "T-01",
+          "from": "north",
+          "to": "harbor",
+          "qty": 25,
+          "edges": ["north-harbor"],
+          "departure": 1,
+          "arrival": 3,
+          "delivered": true
+        },
+        {
+          "id": "S-03",
+          "truck": "T-03",
+          "from": "south",
+          "to": "school",
+          "qty": 20,
+          "edges": ["south-school"],
+          "departure": 1,
+          "arrival": 3,
+          "delivered": true
+        }
+      ],
+      "log": [
+        {
+          "seq": 1,
+          "tick": 0,
+          "kind": "system",
+          "text": "Relief operation started.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 2,
+          "tick": 0,
+          "kind": "dispatch",
+          "text": "T-04 dispatched 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 3,
+          "tick": 1,
+          "kind": "system",
+          "text": "Advanced to turn 1.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 4,
+          "tick": 1,
+          "kind": "arrival",
+          "text": "T-04 delivered 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 5,
+          "tick": 1,
+          "kind": "dispatch",
+          "text": "T-01 dispatched 25 units to Harbor Clinic.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 6,
+          "tick": 1,
+          "kind": "dispatch",
+          "text": "T-03 dispatched 20 units to School Relief Center.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 7,
+          "tick": 2,
+          "kind": "system",
+          "text": "Advanced to turn 2.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 8,
+          "tick": 2,
+          "kind": "alert",
+          "text": "East corridor closed. New dispatches must reroute.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 9,
+          "tick": 2,
+          "kind": "arrival",
+          "text": "T-04 returned to base.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 10,
+          "tick": 3,
+          "kind": "system",
+          "text": "Advanced to turn 3.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 11,
+          "tick": 3,
+          "kind": "arrival",
+          "text": "T-01 delivered 25 units to Harbor Clinic.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 12,
+          "tick": 3,
+          "kind": "arrival",
+          "text": "T-03 delivered 20 units to School Relief Center.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 13,
+          "tick": 4,
+          "kind": "system",
+          "text": "Advanced to turn 4.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 14,
+          "tick": 4,
+          "kind": "alert",
+          "text": "Flooding at East Hub. 10 units of stock lost.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 15,
+          "tick": 5,
+          "kind": "system",
+          "text": "Advanced to turn 5.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 16,
+          "tick": 5,
+          "kind": "arrival",
+          "text": "T-01 returned to base.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 17,
+          "tick": 5,
+          "kind": "arrival",
+          "text": "T-03 returned to base.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 18,
+          "tick": 6,
+          "kind": "system",
+          "text": "Advanced to turn 6.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 19,
+          "tick": 6,
+          "kind": "alert",
+          "text": "City Center requested 10 additional units.",
+          "actor": "Crew"
+        }
+      ]
+    },
+    {
+      "id": "classic-fixture",
+      "title": "Classic fixture",
+      "tick": 7,
+      "version": 11,
+      "phase": "running",
+      "sites": [
+        {
+          "id": "north",
+          "name": "North Hub",
+          "short": "NH",
+          "x": 220,
+          "y": 100,
+          "stock": 35,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "south",
+          "name": "South Depot",
+          "short": "SD",
+          "x": 171,
+          "y": 331,
+          "stock": 30,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "east",
+          "name": "East Hub",
+          "short": "EH",
+          "x": 558,
+          "y": 246,
+          "stock": 5,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "harbor",
+          "name": "Harbor Clinic",
+          "short": "HC",
+          "x": 442,
+          "y": 91,
+          "demand": 35,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 25
+        },
+        {
+          "id": "valley",
+          "name": "Valley Shelter",
+          "short": "VS",
+          "x": 114,
+          "y": 209,
+          "demand": 30,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "city",
+          "name": "City Center",
+          "short": "CC",
+          "x": 342,
+          "y": 219,
+          "demand": 40,
+          "priority": 1,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "hill",
+          "name": "Hill Hospital",
+          "short": "HH",
+          "x": 585,
+          "y": 136,
+          "demand": 25,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 25
+        },
+        {
+          "id": "school",
+          "name": "School Relief Center",
+          "short": "SC",
+          "x": 422,
+          "y": 343,
+          "demand": 20,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 20
+        }
+      ],
+      "roads": [
+        {
+          "id": "north-valley",
+          "a": "north",
+          "b": "valley",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "north-harbor",
+          "a": "north",
+          "b": "harbor",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "north-city",
+          "a": "north",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "valley-south",
+          "a": "valley",
+          "b": "south",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "south-city",
+          "a": "south",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "south-school",
+          "a": "south",
+          "b": "school",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "city-harbor",
+          "a": "city",
+          "b": "harbor",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "east-corridor",
+          "a": "east",
+          "b": "hill",
+          "cost": 1,
+          "blocked": true
+        },
+        {
+          "id": "east-city",
+          "a": "east",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "harbor-hill",
+          "a": "harbor",
+          "b": "hill",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "school-east",
+          "a": "school",
+          "b": "east",
+          "cost": 2,
+          "blocked": false
+        }
+      ],
+      "fleet": [
+        {
+          "id": "T-01",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 5
+        },
+        {
+          "id": "T-02",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 0
+        },
+        {
+          "id": "T-03",
+          "home": "south",
+          "capacity": 30,
+          "status": "ready",
+          "readyAt": 5
+        },
+        {
+          "id": "T-04",
+          "home": "east",
+          "capacity": 40,
+          "status": "ready",
+          "readyAt": 2
+        }
+      ],
+      "shipments": [
+        {
+          "id": "S-01",
+          "truck": "T-04",
+          "from": "east",
+          "to": "hill",
+          "qty": 25,
+          "edges": ["east-corridor"],
+          "departure": 0,
+          "arrival": 1,
+          "delivered": true
+        },
+        {
+          "id": "S-02",
+          "truck": "T-01",
+          "from": "north",
+          "to": "harbor",
+          "qty": 25,
+          "edges": ["north-harbor"],
+          "departure": 1,
+          "arrival": 3,
+          "delivered": true
+        },
+        {
+          "id": "S-03",
+          "truck": "T-03",
+          "from": "south",
+          "to": "school",
+          "qty": 20,
+          "edges": ["south-school"],
+          "departure": 1,
+          "arrival": 3,
+          "delivered": true
+        }
+      ],
+      "log": [
+        {
+          "seq": 1,
+          "tick": 0,
+          "kind": "system",
+          "text": "Relief operation started.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 2,
+          "tick": 0,
+          "kind": "dispatch",
+          "text": "T-04 dispatched 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 3,
+          "tick": 1,
+          "kind": "system",
+          "text": "Advanced to turn 1.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 4,
+          "tick": 1,
+          "kind": "arrival",
+          "text": "T-04 delivered 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 5,
+          "tick": 1,
+          "kind": "dispatch",
+          "text": "T-01 dispatched 25 units to Harbor Clinic.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 6,
+          "tick": 1,
+          "kind": "dispatch",
+          "text": "T-03 dispatched 20 units to School Relief Center.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 7,
+          "tick": 2,
+          "kind": "system",
+          "text": "Advanced to turn 2.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 8,
+          "tick": 2,
+          "kind": "alert",
+          "text": "East corridor closed. New dispatches must reroute.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 9,
+          "tick": 2,
+          "kind": "arrival",
+          "text": "T-04 returned to base.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 10,
+          "tick": 3,
+          "kind": "system",
+          "text": "Advanced to turn 3.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 11,
+          "tick": 3,
+          "kind": "arrival",
+          "text": "T-01 delivered 25 units to Harbor Clinic.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 12,
+          "tick": 3,
+          "kind": "arrival",
+          "text": "T-03 delivered 20 units to School Relief Center.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 13,
+          "tick": 4,
+          "kind": "system",
+          "text": "Advanced to turn 4.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 14,
+          "tick": 4,
+          "kind": "alert",
+          "text": "Flooding at East Hub. 10 units of stock lost.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 15,
+          "tick": 5,
+          "kind": "system",
+          "text": "Advanced to turn 5.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 16,
+          "tick": 5,
+          "kind": "arrival",
+          "text": "T-01 returned to base.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 17,
+          "tick": 5,
+          "kind": "arrival",
+          "text": "T-03 returned to base.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 18,
+          "tick": 6,
+          "kind": "system",
+          "text": "Advanced to turn 6.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 19,
+          "tick": 6,
+          "kind": "alert",
+          "text": "City Center requested 10 additional units.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 20,
+          "tick": 7,
+          "kind": "system",
+          "text": "Advanced to turn 7.",
+          "actor": "Crew"
+        }
+      ]
+    },
+    {
+      "id": "classic-fixture",
+      "title": "Classic fixture",
+      "tick": 8,
+      "version": 12,
+      "phase": "running",
+      "sites": [
+        {
+          "id": "north",
+          "name": "North Hub",
+          "short": "NH",
+          "x": 220,
+          "y": 100,
+          "stock": 35,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "south",
+          "name": "South Depot",
+          "short": "SD",
+          "x": 171,
+          "y": 331,
+          "stock": 30,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "east",
+          "name": "East Hub",
+          "short": "EH",
+          "x": 558,
+          "y": 246,
+          "stock": 5,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "harbor",
+          "name": "Harbor Clinic",
+          "short": "HC",
+          "x": 442,
+          "y": 91,
+          "demand": 35,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 25
+        },
+        {
+          "id": "valley",
+          "name": "Valley Shelter",
+          "short": "VS",
+          "x": 114,
+          "y": 209,
+          "demand": 30,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "city",
+          "name": "City Center",
+          "short": "CC",
+          "x": 342,
+          "y": 219,
+          "demand": 40,
+          "priority": 1,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "hill",
+          "name": "Hill Hospital",
+          "short": "HH",
+          "x": 585,
+          "y": 136,
+          "demand": 25,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 25
+        },
+        {
+          "id": "school",
+          "name": "School Relief Center",
+          "short": "SC",
+          "x": 422,
+          "y": 343,
+          "demand": 20,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 20
+        }
+      ],
+      "roads": [
+        {
+          "id": "north-valley",
+          "a": "north",
+          "b": "valley",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "north-harbor",
+          "a": "north",
+          "b": "harbor",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "north-city",
+          "a": "north",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "valley-south",
+          "a": "valley",
+          "b": "south",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "south-city",
+          "a": "south",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "south-school",
+          "a": "south",
+          "b": "school",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "city-harbor",
+          "a": "city",
+          "b": "harbor",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "east-corridor",
+          "a": "east",
+          "b": "hill",
+          "cost": 1,
+          "blocked": true
+        },
+        {
+          "id": "east-city",
+          "a": "east",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "harbor-hill",
+          "a": "harbor",
+          "b": "hill",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "school-east",
+          "a": "school",
+          "b": "east",
+          "cost": 2,
+          "blocked": false
+        }
+      ],
+      "fleet": [
+        {
+          "id": "T-01",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 5
+        },
+        {
+          "id": "T-02",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 0
+        },
+        {
+          "id": "T-03",
+          "home": "south",
+          "capacity": 30,
+          "status": "ready",
+          "readyAt": 5
+        },
+        {
+          "id": "T-04",
+          "home": "east",
+          "capacity": 40,
+          "status": "ready",
+          "readyAt": 2
+        }
+      ],
+      "shipments": [
+        {
+          "id": "S-01",
+          "truck": "T-04",
+          "from": "east",
+          "to": "hill",
+          "qty": 25,
+          "edges": ["east-corridor"],
+          "departure": 0,
+          "arrival": 1,
+          "delivered": true
+        },
+        {
+          "id": "S-02",
+          "truck": "T-01",
+          "from": "north",
+          "to": "harbor",
+          "qty": 25,
+          "edges": ["north-harbor"],
+          "departure": 1,
+          "arrival": 3,
+          "delivered": true
+        },
+        {
+          "id": "S-03",
+          "truck": "T-03",
+          "from": "south",
+          "to": "school",
+          "qty": 20,
+          "edges": ["south-school"],
+          "departure": 1,
+          "arrival": 3,
+          "delivered": true
+        }
+      ],
+      "log": [
+        {
+          "seq": 1,
+          "tick": 0,
+          "kind": "system",
+          "text": "Relief operation started.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 2,
+          "tick": 0,
+          "kind": "dispatch",
+          "text": "T-04 dispatched 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 3,
+          "tick": 1,
+          "kind": "system",
+          "text": "Advanced to turn 1.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 4,
+          "tick": 1,
+          "kind": "arrival",
+          "text": "T-04 delivered 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 5,
+          "tick": 1,
+          "kind": "dispatch",
+          "text": "T-01 dispatched 25 units to Harbor Clinic.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 6,
+          "tick": 1,
+          "kind": "dispatch",
+          "text": "T-03 dispatched 20 units to School Relief Center.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 7,
+          "tick": 2,
+          "kind": "system",
+          "text": "Advanced to turn 2.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 8,
+          "tick": 2,
+          "kind": "alert",
+          "text": "East corridor closed. New dispatches must reroute.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 9,
+          "tick": 2,
+          "kind": "arrival",
+          "text": "T-04 returned to base.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 10,
+          "tick": 3,
+          "kind": "system",
+          "text": "Advanced to turn 3.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 11,
+          "tick": 3,
+          "kind": "arrival",
+          "text": "T-01 delivered 25 units to Harbor Clinic.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 12,
+          "tick": 3,
+          "kind": "arrival",
+          "text": "T-03 delivered 20 units to School Relief Center.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 13,
+          "tick": 4,
+          "kind": "system",
+          "text": "Advanced to turn 4.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 14,
+          "tick": 4,
+          "kind": "alert",
+          "text": "Flooding at East Hub. 10 units of stock lost.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 15,
+          "tick": 5,
+          "kind": "system",
+          "text": "Advanced to turn 5.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 16,
+          "tick": 5,
+          "kind": "arrival",
+          "text": "T-01 returned to base.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 17,
+          "tick": 5,
+          "kind": "arrival",
+          "text": "T-03 returned to base.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 18,
+          "tick": 6,
+          "kind": "system",
+          "text": "Advanced to turn 6.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 19,
+          "tick": 6,
+          "kind": "alert",
+          "text": "City Center requested 10 additional units.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 20,
+          "tick": 7,
+          "kind": "system",
+          "text": "Advanced to turn 7.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 21,
+          "tick": 8,
+          "kind": "system",
+          "text": "Advanced to turn 8.",
+          "actor": "Crew"
+        }
+      ]
+    },
+    {
+      "id": "classic-fixture",
+      "title": "Classic fixture",
+      "tick": 9,
+      "version": 13,
+      "phase": "running",
+      "sites": [
+        {
+          "id": "north",
+          "name": "North Hub",
+          "short": "NH",
+          "x": 220,
+          "y": 100,
+          "stock": 35,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "south",
+          "name": "South Depot",
+          "short": "SD",
+          "x": 171,
+          "y": 331,
+          "stock": 30,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "east",
+          "name": "East Hub",
+          "short": "EH",
+          "x": 558,
+          "y": 246,
+          "stock": 5,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "harbor",
+          "name": "Harbor Clinic",
+          "short": "HC",
+          "x": 442,
+          "y": 91,
+          "demand": 35,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 25
+        },
+        {
+          "id": "valley",
+          "name": "Valley Shelter",
+          "short": "VS",
+          "x": 114,
+          "y": 209,
+          "demand": 30,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "city",
+          "name": "City Center",
+          "short": "CC",
+          "x": 342,
+          "y": 219,
+          "demand": 40,
+          "priority": 1,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "hill",
+          "name": "Hill Hospital",
+          "short": "HH",
+          "x": 585,
+          "y": 136,
+          "demand": 25,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 25
+        },
+        {
+          "id": "school",
+          "name": "School Relief Center",
+          "short": "SC",
+          "x": 422,
+          "y": 343,
+          "demand": 20,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 20
+        }
+      ],
+      "roads": [
+        {
+          "id": "north-valley",
+          "a": "north",
+          "b": "valley",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "north-harbor",
+          "a": "north",
+          "b": "harbor",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "north-city",
+          "a": "north",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "valley-south",
+          "a": "valley",
+          "b": "south",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "south-city",
+          "a": "south",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "south-school",
+          "a": "south",
+          "b": "school",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "city-harbor",
+          "a": "city",
+          "b": "harbor",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "east-corridor",
+          "a": "east",
+          "b": "hill",
+          "cost": 1,
+          "blocked": true
+        },
+        {
+          "id": "east-city",
+          "a": "east",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "harbor-hill",
+          "a": "harbor",
+          "b": "hill",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "school-east",
+          "a": "school",
+          "b": "east",
+          "cost": 2,
+          "blocked": false
+        }
+      ],
+      "fleet": [
+        {
+          "id": "T-01",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 5
+        },
+        {
+          "id": "T-02",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 0
+        },
+        {
+          "id": "T-03",
+          "home": "south",
+          "capacity": 30,
+          "status": "ready",
+          "readyAt": 5
+        },
+        {
+          "id": "T-04",
+          "home": "east",
+          "capacity": 40,
+          "status": "ready",
+          "readyAt": 2
+        }
+      ],
+      "shipments": [
+        {
+          "id": "S-01",
+          "truck": "T-04",
+          "from": "east",
+          "to": "hill",
+          "qty": 25,
+          "edges": ["east-corridor"],
+          "departure": 0,
+          "arrival": 1,
+          "delivered": true
+        },
+        {
+          "id": "S-02",
+          "truck": "T-01",
+          "from": "north",
+          "to": "harbor",
+          "qty": 25,
+          "edges": ["north-harbor"],
+          "departure": 1,
+          "arrival": 3,
+          "delivered": true
+        },
+        {
+          "id": "S-03",
+          "truck": "T-03",
+          "from": "south",
+          "to": "school",
+          "qty": 20,
+          "edges": ["south-school"],
+          "departure": 1,
+          "arrival": 3,
+          "delivered": true
+        }
+      ],
+      "log": [
+        {
+          "seq": 1,
+          "tick": 0,
+          "kind": "system",
+          "text": "Relief operation started.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 2,
+          "tick": 0,
+          "kind": "dispatch",
+          "text": "T-04 dispatched 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 3,
+          "tick": 1,
+          "kind": "system",
+          "text": "Advanced to turn 1.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 4,
+          "tick": 1,
+          "kind": "arrival",
+          "text": "T-04 delivered 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 5,
+          "tick": 1,
+          "kind": "dispatch",
+          "text": "T-01 dispatched 25 units to Harbor Clinic.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 6,
+          "tick": 1,
+          "kind": "dispatch",
+          "text": "T-03 dispatched 20 units to School Relief Center.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 7,
+          "tick": 2,
+          "kind": "system",
+          "text": "Advanced to turn 2.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 8,
+          "tick": 2,
+          "kind": "alert",
+          "text": "East corridor closed. New dispatches must reroute.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 9,
+          "tick": 2,
+          "kind": "arrival",
+          "text": "T-04 returned to base.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 10,
+          "tick": 3,
+          "kind": "system",
+          "text": "Advanced to turn 3.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 11,
+          "tick": 3,
+          "kind": "arrival",
+          "text": "T-01 delivered 25 units to Harbor Clinic.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 12,
+          "tick": 3,
+          "kind": "arrival",
+          "text": "T-03 delivered 20 units to School Relief Center.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 13,
+          "tick": 4,
+          "kind": "system",
+          "text": "Advanced to turn 4.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 14,
+          "tick": 4,
+          "kind": "alert",
+          "text": "Flooding at East Hub. 10 units of stock lost.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 15,
+          "tick": 5,
+          "kind": "system",
+          "text": "Advanced to turn 5.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 16,
+          "tick": 5,
+          "kind": "arrival",
+          "text": "T-01 returned to base.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 17,
+          "tick": 5,
+          "kind": "arrival",
+          "text": "T-03 returned to base.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 18,
+          "tick": 6,
+          "kind": "system",
+          "text": "Advanced to turn 6.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 19,
+          "tick": 6,
+          "kind": "alert",
+          "text": "City Center requested 10 additional units.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 20,
+          "tick": 7,
+          "kind": "system",
+          "text": "Advanced to turn 7.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 21,
+          "tick": 8,
+          "kind": "system",
+          "text": "Advanced to turn 8.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 22,
+          "tick": 9,
+          "kind": "system",
+          "text": "Advanced to turn 9.",
+          "actor": "Crew"
+        }
+      ]
+    },
+    {
+      "id": "classic-fixture",
+      "title": "Classic fixture",
+      "tick": 10,
+      "version": 14,
+      "phase": "running",
+      "sites": [
+        {
+          "id": "north",
+          "name": "North Hub",
+          "short": "NH",
+          "x": 220,
+          "y": 100,
+          "stock": 35,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "south",
+          "name": "South Depot",
+          "short": "SD",
+          "x": 171,
+          "y": 331,
+          "stock": 30,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "east",
+          "name": "East Hub",
+          "short": "EH",
+          "x": 558,
+          "y": 246,
+          "stock": 5,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "harbor",
+          "name": "Harbor Clinic",
+          "short": "HC",
+          "x": 442,
+          "y": 91,
+          "demand": 35,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 25
+        },
+        {
+          "id": "valley",
+          "name": "Valley Shelter",
+          "short": "VS",
+          "x": 114,
+          "y": 209,
+          "demand": 30,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "city",
+          "name": "City Center",
+          "short": "CC",
+          "x": 342,
+          "y": 219,
+          "demand": 40,
+          "priority": 1,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "hill",
+          "name": "Hill Hospital",
+          "short": "HH",
+          "x": 585,
+          "y": 136,
+          "demand": 25,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 25
+        },
+        {
+          "id": "school",
+          "name": "School Relief Center",
+          "short": "SC",
+          "x": 422,
+          "y": 343,
+          "demand": 20,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 20
+        }
+      ],
+      "roads": [
+        {
+          "id": "north-valley",
+          "a": "north",
+          "b": "valley",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "north-harbor",
+          "a": "north",
+          "b": "harbor",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "north-city",
+          "a": "north",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "valley-south",
+          "a": "valley",
+          "b": "south",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "south-city",
+          "a": "south",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "south-school",
+          "a": "south",
+          "b": "school",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "city-harbor",
+          "a": "city",
+          "b": "harbor",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "east-corridor",
+          "a": "east",
+          "b": "hill",
+          "cost": 1,
+          "blocked": true
+        },
+        {
+          "id": "east-city",
+          "a": "east",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "harbor-hill",
+          "a": "harbor",
+          "b": "hill",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "school-east",
+          "a": "school",
+          "b": "east",
+          "cost": 2,
+          "blocked": false
+        }
+      ],
+      "fleet": [
+        {
+          "id": "T-01",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 5
+        },
+        {
+          "id": "T-02",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 0
+        },
+        {
+          "id": "T-03",
+          "home": "south",
+          "capacity": 30,
+          "status": "ready",
+          "readyAt": 5
+        },
+        {
+          "id": "T-04",
+          "home": "east",
+          "capacity": 40,
+          "status": "ready",
+          "readyAt": 2
+        }
+      ],
+      "shipments": [
+        {
+          "id": "S-01",
+          "truck": "T-04",
+          "from": "east",
+          "to": "hill",
+          "qty": 25,
+          "edges": ["east-corridor"],
+          "departure": 0,
+          "arrival": 1,
+          "delivered": true
+        },
+        {
+          "id": "S-02",
+          "truck": "T-01",
+          "from": "north",
+          "to": "harbor",
+          "qty": 25,
+          "edges": ["north-harbor"],
+          "departure": 1,
+          "arrival": 3,
+          "delivered": true
+        },
+        {
+          "id": "S-03",
+          "truck": "T-03",
+          "from": "south",
+          "to": "school",
+          "qty": 20,
+          "edges": ["south-school"],
+          "departure": 1,
+          "arrival": 3,
+          "delivered": true
+        }
+      ],
+      "log": [
+        {
+          "seq": 1,
+          "tick": 0,
+          "kind": "system",
+          "text": "Relief operation started.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 2,
+          "tick": 0,
+          "kind": "dispatch",
+          "text": "T-04 dispatched 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 3,
+          "tick": 1,
+          "kind": "system",
+          "text": "Advanced to turn 1.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 4,
+          "tick": 1,
+          "kind": "arrival",
+          "text": "T-04 delivered 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 5,
+          "tick": 1,
+          "kind": "dispatch",
+          "text": "T-01 dispatched 25 units to Harbor Clinic.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 6,
+          "tick": 1,
+          "kind": "dispatch",
+          "text": "T-03 dispatched 20 units to School Relief Center.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 7,
+          "tick": 2,
+          "kind": "system",
+          "text": "Advanced to turn 2.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 8,
+          "tick": 2,
+          "kind": "alert",
+          "text": "East corridor closed. New dispatches must reroute.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 9,
+          "tick": 2,
+          "kind": "arrival",
+          "text": "T-04 returned to base.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 10,
+          "tick": 3,
+          "kind": "system",
+          "text": "Advanced to turn 3.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 11,
+          "tick": 3,
+          "kind": "arrival",
+          "text": "T-01 delivered 25 units to Harbor Clinic.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 12,
+          "tick": 3,
+          "kind": "arrival",
+          "text": "T-03 delivered 20 units to School Relief Center.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 13,
+          "tick": 4,
+          "kind": "system",
+          "text": "Advanced to turn 4.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 14,
+          "tick": 4,
+          "kind": "alert",
+          "text": "Flooding at East Hub. 10 units of stock lost.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 15,
+          "tick": 5,
+          "kind": "system",
+          "text": "Advanced to turn 5.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 16,
+          "tick": 5,
+          "kind": "arrival",
+          "text": "T-01 returned to base.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 17,
+          "tick": 5,
+          "kind": "arrival",
+          "text": "T-03 returned to base.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 18,
+          "tick": 6,
+          "kind": "system",
+          "text": "Advanced to turn 6.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 19,
+          "tick": 6,
+          "kind": "alert",
+          "text": "City Center requested 10 additional units.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 20,
+          "tick": 7,
+          "kind": "system",
+          "text": "Advanced to turn 7.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 21,
+          "tick": 8,
+          "kind": "system",
+          "text": "Advanced to turn 8.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 22,
+          "tick": 9,
+          "kind": "system",
+          "text": "Advanced to turn 9.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 23,
+          "tick": 10,
+          "kind": "system",
+          "text": "Advanced to turn 10.",
+          "actor": "Crew"
+        }
+      ]
+    },
+    {
+      "id": "classic-fixture",
+      "title": "Classic fixture",
+      "tick": 11,
+      "version": 15,
+      "phase": "running",
+      "sites": [
+        {
+          "id": "north",
+          "name": "North Hub",
+          "short": "NH",
+          "x": 220,
+          "y": 100,
+          "stock": 35,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "south",
+          "name": "South Depot",
+          "short": "SD",
+          "x": 171,
+          "y": 331,
+          "stock": 30,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "east",
+          "name": "East Hub",
+          "short": "EH",
+          "x": 558,
+          "y": 246,
+          "stock": 5,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "harbor",
+          "name": "Harbor Clinic",
+          "short": "HC",
+          "x": 442,
+          "y": 91,
+          "demand": 35,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 25
+        },
+        {
+          "id": "valley",
+          "name": "Valley Shelter",
+          "short": "VS",
+          "x": 114,
+          "y": 209,
+          "demand": 30,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "city",
+          "name": "City Center",
+          "short": "CC",
+          "x": 342,
+          "y": 219,
+          "demand": 40,
+          "priority": 1,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "hill",
+          "name": "Hill Hospital",
+          "short": "HH",
+          "x": 585,
+          "y": 136,
+          "demand": 25,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 25
+        },
+        {
+          "id": "school",
+          "name": "School Relief Center",
+          "short": "SC",
+          "x": 422,
+          "y": 343,
+          "demand": 20,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 20
+        }
+      ],
+      "roads": [
+        {
+          "id": "north-valley",
+          "a": "north",
+          "b": "valley",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "north-harbor",
+          "a": "north",
+          "b": "harbor",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "north-city",
+          "a": "north",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "valley-south",
+          "a": "valley",
+          "b": "south",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "south-city",
+          "a": "south",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "south-school",
+          "a": "south",
+          "b": "school",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "city-harbor",
+          "a": "city",
+          "b": "harbor",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "east-corridor",
+          "a": "east",
+          "b": "hill",
+          "cost": 1,
+          "blocked": true
+        },
+        {
+          "id": "east-city",
+          "a": "east",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "harbor-hill",
+          "a": "harbor",
+          "b": "hill",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "school-east",
+          "a": "school",
+          "b": "east",
+          "cost": 2,
+          "blocked": false
+        }
+      ],
+      "fleet": [
+        {
+          "id": "T-01",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 5
+        },
+        {
+          "id": "T-02",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 0
+        },
+        {
+          "id": "T-03",
+          "home": "south",
+          "capacity": 30,
+          "status": "ready",
+          "readyAt": 5
+        },
+        {
+          "id": "T-04",
+          "home": "east",
+          "capacity": 40,
+          "status": "ready",
+          "readyAt": 2
+        }
+      ],
+      "shipments": [
+        {
+          "id": "S-01",
+          "truck": "T-04",
+          "from": "east",
+          "to": "hill",
+          "qty": 25,
+          "edges": ["east-corridor"],
+          "departure": 0,
+          "arrival": 1,
+          "delivered": true
+        },
+        {
+          "id": "S-02",
+          "truck": "T-01",
+          "from": "north",
+          "to": "harbor",
+          "qty": 25,
+          "edges": ["north-harbor"],
+          "departure": 1,
+          "arrival": 3,
+          "delivered": true
+        },
+        {
+          "id": "S-03",
+          "truck": "T-03",
+          "from": "south",
+          "to": "school",
+          "qty": 20,
+          "edges": ["south-school"],
+          "departure": 1,
+          "arrival": 3,
+          "delivered": true
+        }
+      ],
+      "log": [
+        {
+          "seq": 1,
+          "tick": 0,
+          "kind": "system",
+          "text": "Relief operation started.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 2,
+          "tick": 0,
+          "kind": "dispatch",
+          "text": "T-04 dispatched 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 3,
+          "tick": 1,
+          "kind": "system",
+          "text": "Advanced to turn 1.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 4,
+          "tick": 1,
+          "kind": "arrival",
+          "text": "T-04 delivered 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 5,
+          "tick": 1,
+          "kind": "dispatch",
+          "text": "T-01 dispatched 25 units to Harbor Clinic.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 6,
+          "tick": 1,
+          "kind": "dispatch",
+          "text": "T-03 dispatched 20 units to School Relief Center.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 7,
+          "tick": 2,
+          "kind": "system",
+          "text": "Advanced to turn 2.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 8,
+          "tick": 2,
+          "kind": "alert",
+          "text": "East corridor closed. New dispatches must reroute.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 9,
+          "tick": 2,
+          "kind": "arrival",
+          "text": "T-04 returned to base.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 10,
+          "tick": 3,
+          "kind": "system",
+          "text": "Advanced to turn 3.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 11,
+          "tick": 3,
+          "kind": "arrival",
+          "text": "T-01 delivered 25 units to Harbor Clinic.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 12,
+          "tick": 3,
+          "kind": "arrival",
+          "text": "T-03 delivered 20 units to School Relief Center.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 13,
+          "tick": 4,
+          "kind": "system",
+          "text": "Advanced to turn 4.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 14,
+          "tick": 4,
+          "kind": "alert",
+          "text": "Flooding at East Hub. 10 units of stock lost.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 15,
+          "tick": 5,
+          "kind": "system",
+          "text": "Advanced to turn 5.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 16,
+          "tick": 5,
+          "kind": "arrival",
+          "text": "T-01 returned to base.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 17,
+          "tick": 5,
+          "kind": "arrival",
+          "text": "T-03 returned to base.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 18,
+          "tick": 6,
+          "kind": "system",
+          "text": "Advanced to turn 6.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 19,
+          "tick": 6,
+          "kind": "alert",
+          "text": "City Center requested 10 additional units.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 20,
+          "tick": 7,
+          "kind": "system",
+          "text": "Advanced to turn 7.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 21,
+          "tick": 8,
+          "kind": "system",
+          "text": "Advanced to turn 8.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 22,
+          "tick": 9,
+          "kind": "system",
+          "text": "Advanced to turn 9.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 23,
+          "tick": 10,
+          "kind": "system",
+          "text": "Advanced to turn 10.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 24,
+          "tick": 11,
+          "kind": "system",
+          "text": "Advanced to turn 11.",
+          "actor": "Crew"
+        }
+      ]
+    },
+    {
+      "id": "classic-fixture",
+      "title": "Classic fixture",
+      "tick": 12,
+      "version": 16,
+      "phase": "completed",
+      "sites": [
+        {
+          "id": "north",
+          "name": "North Hub",
+          "short": "NH",
+          "x": 220,
+          "y": 100,
+          "stock": 35,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "south",
+          "name": "South Depot",
+          "short": "SD",
+          "x": 171,
+          "y": 331,
+          "stock": 30,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "east",
+          "name": "East Hub",
+          "short": "EH",
+          "x": 558,
+          "y": 246,
+          "stock": 5,
+          "kind": "depot",
+          "demand": 0,
+          "delivered": 0,
+          "priority": 0
+        },
+        {
+          "id": "harbor",
+          "name": "Harbor Clinic",
+          "short": "HC",
+          "x": 442,
+          "y": 91,
+          "demand": 35,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 25
+        },
+        {
+          "id": "valley",
+          "name": "Valley Shelter",
+          "short": "VS",
+          "x": 114,
+          "y": 209,
+          "demand": 30,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "city",
+          "name": "City Center",
+          "short": "CC",
+          "x": 342,
+          "y": 219,
+          "demand": 40,
+          "priority": 1,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 0
+        },
+        {
+          "id": "hill",
+          "name": "Hill Hospital",
+          "short": "HH",
+          "x": 585,
+          "y": 136,
+          "demand": 25,
+          "priority": 3,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 25
+        },
+        {
+          "id": "school",
+          "name": "School Relief Center",
+          "short": "SC",
+          "x": 422,
+          "y": 343,
+          "demand": 20,
+          "priority": 2,
+          "kind": "relief",
+          "stock": 0,
+          "delivered": 20
+        }
+      ],
+      "roads": [
+        {
+          "id": "north-valley",
+          "a": "north",
+          "b": "valley",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "north-harbor",
+          "a": "north",
+          "b": "harbor",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "north-city",
+          "a": "north",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "valley-south",
+          "a": "valley",
+          "b": "south",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "south-city",
+          "a": "south",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "south-school",
+          "a": "south",
+          "b": "school",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "city-harbor",
+          "a": "city",
+          "b": "harbor",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "east-corridor",
+          "a": "east",
+          "b": "hill",
+          "cost": 1,
+          "blocked": true
+        },
+        {
+          "id": "east-city",
+          "a": "east",
+          "b": "city",
+          "cost": 2,
+          "blocked": false
+        },
+        {
+          "id": "harbor-hill",
+          "a": "harbor",
+          "b": "hill",
+          "cost": 1,
+          "blocked": false
+        },
+        {
+          "id": "school-east",
+          "a": "school",
+          "b": "east",
+          "cost": 2,
+          "blocked": false
+        }
+      ],
+      "fleet": [
+        {
+          "id": "T-01",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 5
+        },
+        {
+          "id": "T-02",
+          "home": "north",
+          "capacity": 25,
+          "status": "ready",
+          "readyAt": 0
+        },
+        {
+          "id": "T-03",
+          "home": "south",
+          "capacity": 30,
+          "status": "ready",
+          "readyAt": 5
+        },
+        {
+          "id": "T-04",
+          "home": "east",
+          "capacity": 40,
+          "status": "ready",
+          "readyAt": 2
+        }
+      ],
+      "shipments": [
+        {
+          "id": "S-01",
+          "truck": "T-04",
+          "from": "east",
+          "to": "hill",
+          "qty": 25,
+          "edges": ["east-corridor"],
+          "departure": 0,
+          "arrival": 1,
+          "delivered": true
+        },
+        {
+          "id": "S-02",
+          "truck": "T-01",
+          "from": "north",
+          "to": "harbor",
+          "qty": 25,
+          "edges": ["north-harbor"],
+          "departure": 1,
+          "arrival": 3,
+          "delivered": true
+        },
+        {
+          "id": "S-03",
+          "truck": "T-03",
+          "from": "south",
+          "to": "school",
+          "qty": 20,
+          "edges": ["south-school"],
+          "departure": 1,
+          "arrival": 3,
+          "delivered": true
+        }
+      ],
+      "log": [
+        {
+          "seq": 1,
+          "tick": 0,
+          "kind": "system",
+          "text": "Relief operation started.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 2,
+          "tick": 0,
+          "kind": "dispatch",
+          "text": "T-04 dispatched 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 3,
+          "tick": 1,
+          "kind": "system",
+          "text": "Advanced to turn 1.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 4,
+          "tick": 1,
+          "kind": "arrival",
+          "text": "T-04 delivered 25 units to Hill Hospital.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 5,
+          "tick": 1,
+          "kind": "dispatch",
+          "text": "T-01 dispatched 25 units to Harbor Clinic.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 6,
+          "tick": 1,
+          "kind": "dispatch",
+          "text": "T-03 dispatched 20 units to School Relief Center.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 7,
+          "tick": 2,
+          "kind": "system",
+          "text": "Advanced to turn 2.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 8,
+          "tick": 2,
+          "kind": "alert",
+          "text": "East corridor closed. New dispatches must reroute.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 9,
+          "tick": 2,
+          "kind": "arrival",
+          "text": "T-04 returned to base.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 10,
+          "tick": 3,
+          "kind": "system",
+          "text": "Advanced to turn 3.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 11,
+          "tick": 3,
+          "kind": "arrival",
+          "text": "T-01 delivered 25 units to Harbor Clinic.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 12,
+          "tick": 3,
+          "kind": "arrival",
+          "text": "T-03 delivered 20 units to School Relief Center.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 13,
+          "tick": 4,
+          "kind": "system",
+          "text": "Advanced to turn 4.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 14,
+          "tick": 4,
+          "kind": "alert",
+          "text": "Flooding at East Hub. 10 units of stock lost.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 15,
+          "tick": 5,
+          "kind": "system",
+          "text": "Advanced to turn 5.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 16,
+          "tick": 5,
+          "kind": "arrival",
+          "text": "T-01 returned to base.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 17,
+          "tick": 5,
+          "kind": "arrival",
+          "text": "T-03 returned to base.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 18,
+          "tick": 6,
+          "kind": "system",
+          "text": "Advanced to turn 6.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 19,
+          "tick": 6,
+          "kind": "alert",
+          "text": "City Center requested 10 additional units.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 20,
+          "tick": 7,
+          "kind": "system",
+          "text": "Advanced to turn 7.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 21,
+          "tick": 8,
+          "kind": "system",
+          "text": "Advanced to turn 8.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 22,
+          "tick": 9,
+          "kind": "system",
+          "text": "Advanced to turn 9.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 23,
+          "tick": 10,
+          "kind": "system",
+          "text": "Advanced to turn 10.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 24,
+          "tick": 11,
+          "kind": "system",
+          "text": "Advanced to turn 11.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 25,
+          "tick": 12,
+          "kind": "system",
+          "text": "Advanced to turn 12.",
+          "actor": "Crew"
+        },
+        {
+          "seq": 26,
+          "tick": 12,
+          "kind": "system",
+          "text": "Operation closed. Final delivery report available.",
+          "actor": "Crew"
+        }
+      ]
+    }
+  ]
+}
